@@ -1,0 +1,11 @@
+services:
+  builder:
+    build: .
+    container_name: maven-node-dev
+    volumes:
+      - ..:/app
+      - maven-repo:/root/.m2
+    command: ["bash", "-c", "docker-build/build.sh"]
+
+volumes:
+  maven-repo:
