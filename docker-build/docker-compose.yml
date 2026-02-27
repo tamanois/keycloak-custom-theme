@@ -2,7 +2,6 @@ services:
   builder:
     build: .
     container_name: maven-node-dev
-    user: 1000:1000
     volumes:
       - ..:/app
       - maven-repo:/root/.m2
